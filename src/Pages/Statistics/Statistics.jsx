@@ -1,9 +1,6 @@
-
-import React, { PureComponent } from 'react';
-
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
+import { Cell, Pie, PieChart } from "recharts";
 
 
 
@@ -77,10 +74,10 @@ const Statistics = () => {
                             </PieChart>
                         </div>
                         <div className='mt-10 flex gap-10'>
-                            <div className='flex items-center gap-4 font-semibold'>Your Donation
+                            <div className='flex items-center gap-3 font-semibold'>Your Donation
                                 <div className='w-14 bg-[#00C49F] h-3'></div>
                             </div>
-                            <div className='flex items-center gap-4 font-semibold'>Total Donation
+                            <div className='flex items-center gap-3 font-semibold'>Total Donation
                                 <div className='w-14 bg-[#FF444A] h-3'></div>
                             </div>
 

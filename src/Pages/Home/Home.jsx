@@ -7,9 +7,10 @@ const Home = () => {
 
     const allDonations = useLoaderData();
     
+    
     return (
         <div>
-            <Banner></Banner>
+            <Banner allDonations={allDonations}></Banner>
             <AllCards allDonations={allDonations}></AllCards>
         </div>
     );
