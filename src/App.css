@@ -1,0 +1,21 @@
+.card-blue{
+  background-color: #0052FF;/* text color */
+  background-color: #76a2ff;/* category color */
+  background-color: #d8e4ff;/* card color */
+}
+.card-pink{
+  background-color: #ff444a;/* text color */
+  background-color: #ff6b70;/* category color */
+  background-color: #ffcdcf;/* card color */
+}
+.card-green{
+  background-color: #79c23f;/* text color */
+  background-color: #b7de98;/* category color */
+  background-color: #e1f1d4;/* card color */
+}
+.card-black{
+  background-color: #3d3d3d;/* text color */
+  background-color: #a3a3a3;/* category color */
+  background-color: #e0e0e0;/* card color */
+}
+
