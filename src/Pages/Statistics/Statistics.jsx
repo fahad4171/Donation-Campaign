@@ -55,7 +55,7 @@ const Statistics = () => {
     return (
         <div className='mt-10 md:mx-[300px]'>
             {
-                noFound ? <p className='text-4xl flex justify-center items-center h-[80vh]'>{noFound}</p> :
+                noFound ? <p className='text-2xl md:text-4xl flex justify-center items-center h-[80vh]'>{noFound}</p> :
                     <div>
                         <div >
                             <PieChart width={400} height={400}>

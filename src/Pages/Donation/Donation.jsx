@@ -9,6 +9,10 @@ const Donation = () => {
     const [notFound, setNotFound] = useState();
     
     const [showAll, setShowAll] = useState(false);
+    
+    const donations = useLoaderData([]);
+
+    const { picture, category, card_color, category_bg_color, button_color, description, id, price, text_color, title } = {donations} 
 
     
     useEffect(() => {
@@ -42,7 +46,7 @@ const Donation = () => {
                                     <h1 className="font-semibold">{donate.title}</h1>
                                     <p style={{color: donate.text_color}} className="font-semibold">{donate.price}</p>
                                     <Link>
-                                        <button className="px-4 py-2 rounded text-white" style={{background: donate.button_color}}>View </button>
+                                        <button className="px-4 py-2 rounded text-white" style={{background: donate.button_color}}> </button>
                                     </Link>
                                 </div>
                             </div>
@@ -50,7 +54,7 @@ const Donation = () => {
                     )
 
                 : donated.slice(0, 4).map(donate =>
-                    <div key={donate.id}>
+                    <div key={donate.id} className="flex justify-center">
                         <div style={{ backgroundColor: donate.card_color }} className="rounded-lg md:flex">
                             <div>
                                 <img src={donate.picture}  alt="image" />

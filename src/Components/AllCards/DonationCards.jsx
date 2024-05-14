@@ -5,7 +5,7 @@ const DonationCards = ({ donation }) => {
     const { picture, category, card_color, category_bg_color, button_color, description, id, price, text_color, title } = donation || {}    
 
     return (
-        <div>
+        <div className="flex justify-center">
             <Link to={`/donations/${id}`}>
             <div style={{ backgroundColor: card_color }}  className="rounded-lg">
                 <div>
