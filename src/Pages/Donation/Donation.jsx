@@ -10,11 +10,7 @@ const Donation = () => {
     
     const [showAll, setShowAll] = useState(false);
     
-    const donations = useLoaderData([]);
 
-    const { picture, category, card_color, category_bg_color, button_color, description, id, price, text_color, title } = {donations} 
-
-    
     useEffect(() => {
         const donationItems = JSON.parse(localStorage.getItem('donation'));
 
@@ -54,7 +50,7 @@ const Donation = () => {
                     )
 
                 : donated.slice(0, 4).map(donate =>
-                    <div key={donate.id} className="flex justify-center">
+                    <div key={donate.id} className="">
                         <div style={{ backgroundColor: donate.card_color }} className="rounded-lg md:flex">
                             <div>
                                 <img src={donate.picture}  alt="image" />
