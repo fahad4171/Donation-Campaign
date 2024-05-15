@@ -7,10 +7,6 @@ import { useState } from "react";
 const AllCards = ({allDonations}) => {
     
     
-    const { title, category } = allDonations || {}
-    console.log(allDonations)
-
-
     //1.create state to store search value
     const [searchItem, setSearchItem] = useState('');
 
@@ -21,9 +17,9 @@ const AllCards = ({allDonations}) => {
     }
     console.log(searchItem)
     return (
-        <div>
+        <div className="mb-20">
             <Banner data={handleInput}></Banner>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-20">
                 {allDonations.filter((val) => {
                     if (searchItem == "") {
