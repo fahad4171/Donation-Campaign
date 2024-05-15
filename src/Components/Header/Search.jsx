@@ -21,7 +21,7 @@ const Search = ({ allDonations }) => {
     console.log(searchItem)
     return (
         <div>
-            <div className="flex items">
+            <div className="">
                 <input onChange={handleInput} type="text" value={searchItem} placeholder="Search here" className="input input-bordered w-full max-w-xs text-black" />
                 <button className="btn btn-secondary">Search</button>
             </div>

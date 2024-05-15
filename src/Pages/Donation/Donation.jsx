@@ -32,11 +32,10 @@ const Donation = () => {
                     <div className="grid md:grid-cols-2 gap-5">
                         {
                             showAll ? donated.map(donate =>
-                                <div key={donate.id}>
-                                    <div style={{ backgroundColor: donate.card_color }} className="rounded-lg md:flex">
-                                        <div >
-                                            <img src={donate.picture} alt="image" />
-                                        </div>
+                                <div key={donate.id} className="">
+
+                                    <div style={{ backgroundColor: donate.card_color }} className="card lg:card-side bg-base-100">
+                                        <figure><img src={donate.picture} alt="Album" /></figure>
                                         <div className="card-body">
                                             <span style={{ backgroundColor: donate.category_bg_color, color: donate.text_color }} className="badge rounded-md font-medium">{donate.category}</span>
                                             <h1 className="font-semibold">{donate.title}</h1>
@@ -48,24 +47,21 @@ const Donation = () => {
                                     </div>
                                 </div>
                             )
-
+                                /* without clicking see button */
                                 : donated.slice(0, 4).map(donate =>
                                     <div key={donate.id} className="">
-                                        <div style={{ backgroundColor: donate.card_color }} className="rounded-lg md:flex">
-                                            <div>
-                                                <img src={donate.picture} alt="image" />
-                                            </div>
-                                            <div className="card-body">
-                                                <span style={{ backgroundColor: donate.category_bg_color, color: donate.text_color }} className="badge rounded-md font-medium">{donate.category}</span>
-                                                <h1 className="font-semibold">{donate.title}</h1>
-                                                <p style={{ color: donate.text_color }} className="font-semibold">{donate.price}</p>
-
-                                                <Link>
-                                                    <button className="px-4 py-2 rounded text-white" style={{ background: donate.button_color }}>View Details</button>
-                                                </Link>
-
-                                            </div>
+                                       
+                                        <div style={{ backgroundColor: donate.card_color }} className="card lg:card-side bg-base-100">
+                                        <figure><img src={donate.picture} alt="Album" /></figure>
+                                        <div className="card-body">
+                                            <span style={{ backgroundColor: donate.category_bg_color, color: donate.text_color }} className="badge rounded-md font-medium">{donate.category}</span>
+                                            <h1 className="font-semibold">{donate.title}</h1>
+                                            <p style={{ color: donate.text_color }} className="font-semibold">{donate.price}</p>
+                                            <Link>
+                                                <button className="px-4 py-2 rounded text-white" style={{ background: donate.button_color }}>View Details</button>
+                                            </Link>
                                         </div>
+                                    </div>
                                     </div>
                                 )
                         }
