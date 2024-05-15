@@ -5,12 +5,12 @@ import Logo from "./Logo";
 const Navbar = () => {
     return (
         <div className="mt-5">
-            <div className="navbar">
+            <div className="navbar gap-3 ">
                 <div className="flex-1">
                     <Logo></Logo>
                 </div>
                 <div className="flex-none">
-                    <ul className="menu-horizontal px-1 gap-5 font-medium">
+                    <ul className="menu-horizontal px-1 gap-2 md:gap-5 font-medium">
                         <li>
                             <NavLink
                                 to="/"

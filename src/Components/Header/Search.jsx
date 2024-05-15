@@ -21,20 +21,11 @@ const Search = ({ allDonations }) => {
     console.log(searchItem)
     return (
         <div>
-            <div className="">
-                <input onChange={handleInput} type="text" value={searchItem} placeholder="Search here" className="input input-bordered w-full max-w-xs text-black" />
+            <div className="flex">
+                <input onChange={handleInput} type="text" placeholder="Search here" className="input input-bordered w-full max-w-xs text-black" />
                 <button className="btn btn-secondary">Search</button>
             </div>
-            <div>
-                {allDonations.filter((val) => {
-                    if (searchItem == "") {
-                        return val;
-                    } else if (val.category.toLowerCase().includes(searchItem.toLocaleLowerCase())) {
-                        return val;
-                    }
-                }).map(donation => <DonationCards key={donation.id} donation={donation}></DonationCards>)
-                }
-            </div>
+            
         </div>
     );
 };
