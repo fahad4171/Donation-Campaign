@@ -13,7 +13,7 @@ const Search = ({ allDonations }) => {
     //1.create state to store search value
     const [searchItem, setSearchItem] = useState('');
 
-    //2. with this onchange handler we capture the value from input and store it to state
+    
     const handleInput = (e) => {
         const searchTerm = e.target.value;
         setSearchItem(searchTerm);
@@ -22,7 +22,7 @@ const Search = ({ allDonations }) => {
     return (
         <div>
             <div className="flex items">
-                <input onChange={handleInput} type="text" value={searchItem} placeholder="Search here" className="input input-bordered w-full max-w-xs" />
+                <input onChange={handleInput} type="text" value={searchItem} placeholder="Search here" className="input input-bordered w-full max-w-xs text-black" />
                 <button className="btn btn-secondary">Search</button>
             </div>
             <div>
@@ -32,11 +32,7 @@ const Search = ({ allDonations }) => {
                     } else if (val.category.toLowerCase().includes(searchItem.toLocaleLowerCase())) {
                         return val;
                     }
-                }).map((val) => {
-                    return (
-                        
-                    )
-                })
+                }).map(donation => <DonationCards key={donation.id} donation={donation}></DonationCards>)
                 }
             </div>
         </div>
