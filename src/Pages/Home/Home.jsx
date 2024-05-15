@@ -3,15 +3,14 @@ import Banner from "../../Components/Header/Banner";
 import AllCards from "../../Components/AllCards/AllCards";
 
 
-const Home = () => {
+const Home = (handleInput) => {
 
     const allDonations = useLoaderData();
     
     
     return (
         <div>
-            <Banner allDonations={allDonations}></Banner>
-            <AllCards allDonations={allDonations}></AllCards>
+            <AllCards allDonations={allDonations} handleInput={handleInput}></AllCards>
         </div>
     );
 };

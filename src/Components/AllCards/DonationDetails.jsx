@@ -48,9 +48,6 @@ const DonationDetails = () => {
     }
 }
 
-
-
-
 return (
     <div className="mb-20">
         <div className="relative ">
